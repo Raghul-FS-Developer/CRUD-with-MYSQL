@@ -33,7 +33,7 @@ function AddStudent() {
      
  })
     let handleSave =async(data)=>{
-       try { let d=await axios.post('http://localhost:4000/post',data)
+       try { let d=await axios.post('https://crud-with-mysql.herokuapp.com/post',data)
        if(d.status === 200){
         toast.success("posted successfully")
         setTimeout(()=> navigate('/all-students'),2000)

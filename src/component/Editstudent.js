@@ -45,7 +45,7 @@ function EditStudent() {
 
   let handleSave = async (data) => {
    let res =  await axios.put(
-      `http://localhost:4000/edit/${params.id}`,
+      `https://crud-with-mysql.herokuapp.com/edit/${params.id}`,
       data
     );
 
@@ -67,7 +67,7 @@ function EditStudent() {
   //to get the data of specific ID
   let getData = async () => {
     let res = await axios.get(
-      `http://localhost:4000/get/${params.id}`
+      `https://crud-with-mysql.herokuapp.com/get/${params.id}`
     );
     
 
