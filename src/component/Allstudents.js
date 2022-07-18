@@ -54,7 +54,7 @@ getData();
             </thead>
             <tbody>
                 {
-                    data.map((e,i)=>{
+                    data?.map((e,i)=>{
                         return<tr key={i}>
                             <th scope="row">{i+1}</th>
                             <td>{e.name}</td>
