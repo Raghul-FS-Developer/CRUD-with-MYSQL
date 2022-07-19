@@ -37,7 +37,7 @@ getData();
 }
 
     return (<>
-        <ToastContainer autoClose={1000}/>
+        <ToastContainer autoClose={1000} limit={3}/>
         <div className='margin'>
              
             <table class="table table-striped">

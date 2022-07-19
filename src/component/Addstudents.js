@@ -45,7 +45,7 @@ function AddStudent() {
        }
     }
     return (
-      <><ToastContainer autoClose={2000}/>
+      <><ToastContainer autoClose={2000} limit={1}/>
         <div className='add-student'>
             <h1 className='add-style'>Add Student</h1>
            <form onSubmit={formik.handleSubmit}>
