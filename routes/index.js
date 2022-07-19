@@ -4,11 +4,14 @@ const mysql = require("mysql2")
 require("dotenv").config()
 
 const password = process.env.PASSWORD
+const Host = process.env.HOST
+const User = process.env.USER
+const database = process.env.DB
 const db = mysql.createPool({
-  host:"localhost",
-  user:"root",
+  host:Host,
+  user:User,
   password:password,
-  database:"crud"
+  database:database
 })
 router.get('/get',async(req,res)=>{
   const sqlGet = "SELECT * FROM contact_db"
