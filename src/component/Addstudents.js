@@ -35,8 +35,9 @@ function AddStudent() {
     let handleSave =async(data)=>{
        try { let d=await axios.post('https://crud-with-mysql.herokuapp.com/post',data)
        if(d.status === 200){
-        toast.success("posted successfully")
-        setTimeout(()=> navigate('/all-students'),2000)
+        navigate('/all-students')
+        
+        setTimeout(()=>   toast.success("posted successfully")  ,500)
          
         }
          
@@ -121,7 +122,7 @@ function AddStudent() {
               />
                    {formik.touched.dept && formik.errors.dept ? (<div style={{color:"red"}}>{formik.errors.dept}</div>): null}
                    {formik.touched.dept && !formik.errors.dept ? (<div style={{color:"green"}}>wow! Nice department</div>): null}
-     <button type="submit" className="btn btn-success mt-4" >Submit</button>
+     <button type="submit" className="btn btn-success mt-4 mb-4" >Submit</button>
            </form>
         </div>
         </>

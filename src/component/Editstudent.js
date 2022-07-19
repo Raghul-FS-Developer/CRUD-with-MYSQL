@@ -50,6 +50,8 @@ function EditStudent() {
     );
 
     if(res.status === 200){
+      navigate("/all-students")
+      setTimeout(()=>{
       const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 1000));
       toast.promise(
           resolveAfter3Sec,
@@ -59,7 +61,7 @@ function EditStudent() {
   
           }
       )
-      setTimeout(()=>navigate("/all-students"),3000)
+        },500)
       
     }
   };
@@ -159,7 +161,7 @@ function EditStudent() {
            {formik.touched.dept && formik.errors.dept ? (<div style={{color:"red"}}>{formik.errors.dept}</div>): null}
                    {formik.touched.dept && !formik.errors.dept ? (<div style={{color:"green"}}>wow! Nice department</div>): null}
         ,
-        <button type="submit" className="btn btn-success mt-4" >
+        <button type="submit" className="btn btn-success mt-4 mb-4" >
           Submit
         </button>
       </form>
