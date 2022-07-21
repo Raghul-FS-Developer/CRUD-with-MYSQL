@@ -31,7 +31,7 @@ let res =await axios.get('https://crud-with-mysql.herokuapp.com/get')
 let handleDelete=async(id)=>{
     await axios.delete(`https://crud-with-mysql.herokuapp.com/delete/${id}`)
 getData();
-   toast.success("deleted successfully",{
+   toast.success("Deleted successfully",{
     theme:"dark"
    })
 }

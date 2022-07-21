@@ -44,25 +44,17 @@ function EditStudent() {
   // putting data using axios
 
   let handleSave = async (data) => {
+
+    const id  = toast.loading('Updating...')
    let res =  await axios.put(
       `https://crud-with-mysql.herokuapp.com/edit/${params.id}`,
       data
     );
 
     if(res.status === 200){
-      navigate("/all-students")
-      setTimeout(()=>{
-      const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 1000));
-      toast.promise(
-          resolveAfter3Sec,
-          {
-            pending: 'Posting',
-            success: 'Updated successfully👌',
-  
-          }
-      )
-        },500)
       
+     navigate("/all-students")
+     setTimeout(()=>toast.success("Updated successfully"),500)
     }
   };
 
