@@ -33,11 +33,13 @@ function AddStudent() {
      
  })
     let handleSave =async(data)=>{
-       try { let d=await axios.post('https://crud-with-mysql.herokuapp.com/post',data)
+       try { 
+        const id  = toast.loading('Adding...')
+        let d=await axios.post('https://crud-with-mysql.herokuapp.com/post',data)
        if(d.status === 200){
         navigate('/all-students')
         
-        setTimeout(()=>   toast.success("posted successfully")  ,500)
+        setTimeout(()=>   toast.success("Added successfully")  ,500)
          
         }
          
