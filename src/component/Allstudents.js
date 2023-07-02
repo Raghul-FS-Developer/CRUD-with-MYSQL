@@ -19,7 +19,7 @@ function AllStudents() {
 
     // getting data using axios
 let getData =async()=>{
-let res =await axios.get('https://crud-with-mysql.herokuapp.com/get')
+let res =await axios.get('https://https-crud-with-mysql-render-com.onrender.com/get')
 //  .then((res)=>{setData(res.data)})
  setData(res.data)
 
@@ -29,7 +29,7 @@ let res =await axios.get('https://crud-with-mysql.herokuapp.com/get')
 
 // deleting data using axios
 let handleDelete=async(id)=>{
-    await axios.delete(`https://crud-with-mysql.herokuapp.com/delete/${id}`)
+    await axios.delete(`https://https-crud-with-mysql-render-com.onrender.com/delete/${id}`)
 getData();
    toast.success("Deleted successfully",{
     theme:"dark"

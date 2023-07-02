@@ -47,7 +47,7 @@ function EditStudent() {
 
     const id  = toast.loading('Updating...')
    let res =  await axios.put(
-      `https://crud-with-mysql.herokuapp.com/edit/${params.id}`,
+      `https://https-crud-with-mysql-render-com.onrender.com/edit/${params.id}`,
       data
     );
 
@@ -61,7 +61,7 @@ function EditStudent() {
   //to get the data of specific ID
   let getData = async () => {
     let res = await axios.get(
-      `https://crud-with-mysql.herokuapp.com/get/${params.id}`
+      `https://https-crud-with-mysql-render-com.onrender.com/get/${params.id}`
     );
     
 

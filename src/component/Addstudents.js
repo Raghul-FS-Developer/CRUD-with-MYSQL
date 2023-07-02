@@ -35,7 +35,7 @@ function AddStudent() {
     let handleSave =async(data)=>{
        try { 
         const id  = toast.loading('Adding...')
-        let d=await axios.post('https://crud-with-mysql.herokuapp.com/post',data)
+        let d=await axios.post('https://https-crud-with-mysql-render-com.onrender.com/post',data)
        if(d.status === 200){
         navigate('/all-students')
         
